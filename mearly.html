@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Mearly Machine</title>
+      <script src="mearly.js"> </script>
+  </head>
+  <body>
+    <h1> Mealy Machine </h1>
+    <h2>First Step/İlk Adım</h2>
+    <form action="" method="post">
+        <label for="stateLenght">State Lenght: </label> <input  type="number" id="stateLenght" value="">
+        <label for="inputAlphabet">Input Alphabet: </label><input  type="text" id="inputAlphabet" value="">
+        <label for="outputAlphabet">Output Alphabet: </label><input  type="text" id="outputAlphabet" value=""><br>
+        <input type="button" id="addButton" value="Create"  onclick="add();">
+        <input type="button" id="clearAll" value="Clear All" onclick="location.reload(true);">
+    </form>
+    <form action="" method="post" id="optionsPanel" hidden="">
+        <h2>Second Step(Create Transition Diagram)/DEĞERLERİ SEÇİNİZ</h2>
+          <label>Press add button and add new values for build table.</label><br>
+          <br><label>Tablo oluşturmak için yeni değerler ekleyiniz.</label>
+
+        Input state : <select id="selectState">
+
+        </select>
+        Input Letter : <select id="selectLetter">
+
+        </select>
+        Output Letter : <select id="selectOutput">
+
+        </select>
+        Next State : <select id="selectNextState">
+
+        </select>
+        <input type="button" onclick="tableAdd();" value="Add">
+    </form>
+    <div id="list" hidden="">
+
+      <h2>Third Step</h2>
+      <form id="listTable" action="" method="post" >
+          <table id='table' border="1">
+
+              <tr>
+                <th>Old State</th>
+                <th>Input</th>
+                <th>Output</th>
+                <th>New/State</th>
+              </tr>
+
+          </table>
+          <input type="button" value="Confirm" onclick="document.getElementById('search').style.display = 'block'">
+      </form>
+    </div>
+    <div id="search" hidden>
+        <div id="divList">
+
+        </div>
+
+    </div>
+  
+  </body>
+</html>
